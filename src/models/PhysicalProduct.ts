@@ -12,7 +12,7 @@ export default class PhysicalProduct extends Product {
         return `${this.name} costs $${this.price}`;
     }
 
-     getPriceWithTax() {
+    getPriceWithTax() {
         return this.price * (Product.taxRate + 0.1)
      }
     
