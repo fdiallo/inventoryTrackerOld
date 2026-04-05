@@ -1,16 +1,15 @@
 import Product from "./Product";
 
-
-class PhysicalProduct extends Product {
-    weight: number;
-
+export default class PhysicalProduct extends Product {
+     private _weight: number = 0
+    
     constructor(sku: string, name: string, price: number, weight: number) {
         super(sku, name, price);
-        this.weight = weight;
+        this._weight = weight;
     }
 
     displayDetails(): string {
-        return `${this.name} costs $${this.price} and is a digital download of ${this.weight}MB.`;
+        return `${this.name} costs $${this.price}`;
     }
 
      getPriceWithTax() {
@@ -18,7 +17,7 @@ class PhysicalProduct extends Product {
      }
     
     get weight(): string{
-        return `${this.weight} kg`
+        return `${this._weight} kg`
     }
 }
 

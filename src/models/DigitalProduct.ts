@@ -14,5 +14,5 @@ class DigitalProduct extends Product {
     }
 }
 
-const ebook = new DigitalProduct("E-Book", 15, 5);
+const ebook = new DigitalProduct("", "E-Book", 15, 5);
 console.log(ebook.displayDetails());
