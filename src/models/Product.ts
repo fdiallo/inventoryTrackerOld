@@ -15,7 +15,7 @@ export default class Product {
         return `${this.name} costs $${this.price}.`;
     }
 
-    getPriceWithTax() {
+    getPriceWithTax(): number {
         return this.price * (1 + Product.taxRate)
     }
 }
